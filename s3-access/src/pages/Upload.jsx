@@ -55,6 +55,7 @@ function Upload() {
 
   const handleFileChange = (e) => {
     setFileData(e.target.files[0]);
+    console.log('files detales::',e.target.files[0])
     setData({
       data:{},
       loading:false,

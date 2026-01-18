@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Upload from './pages/upload';
 import App from './App';
+import View from './pages/View';
 
 const routerconfig = createBrowserRouter([
 
@@ -12,6 +13,10 @@ const routerconfig = createBrowserRouter([
     path: '/upload',
     element: <Upload />,
   },
+  {
+    path:"/view",
+    element:<View/>
+  }
 ]);
 
 function Router() {

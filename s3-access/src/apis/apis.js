@@ -65,3 +65,20 @@ export async function uploadSuccess(url, objectKey, fileName) {
     throw e;
   }
 }
+
+export async function getImages(url) {
+  try {
+    const res = await fetch(url, {
+      method: 'get',
+    });
+
+    if (!res.ok) throw new Error('Image fetch failed');
+
+    const data = await res.json();
+
+    return data?.images;
+  } catch (e) {
+    console.log(e.message);
+    throw e;
+  }
+}
